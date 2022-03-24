@@ -9,30 +9,6 @@ import javax.persistence.Query;
 import java.util.List;
 
 public class AppTwo {
-    public static void main(String[] args) {
-        Util.getSessionFactory();
-
-       Continent continent1 = new Continent("Africa", 60, "29,2 млн км²",1275920972);
-       Continent continent2 = new Continent("Australia", 1, "7 692 024 км²",25726900);
-       Continent continent3 = new Continent("South America", 12, "17 840 000 км²",385742554);
-       Continent continent4 = new Continent("North America", 23, "24 709 000 км²",579000000);
-       Continent continent5 = new Continent("Eurasia", 99, "55 000 000 км²", 5348554000L);
-       create(continent1);
-       create(continent2);
-       create(continent3);
-       create(continent4);
-       create(continent5);
-
-        read();
-        List<Continent> continents = read();
-        for (Continent continent: continents) {
-            System.out.println(continent);
-        }
-
-        deleteById(1);
-        dropContinentTable();
-    }
-
 
     public static long create(Continent continent){
         try{

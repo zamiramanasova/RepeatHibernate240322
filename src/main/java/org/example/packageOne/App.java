@@ -12,30 +12,6 @@ import java.util.List;
  *
  */
 public class App {
-    public static void main( String[] args ) {
-
-        Util.getSessionFactory();
-
-        Student student1 = new Student("Meerim", "Java", 18);
-        Student student2 = new Student("Vova", "Git", 18);
-        Student student3 = new Student("Vadim", "Piton", 24);
-        Student student4 = new Student("Maria", "CSS", 42);
-        Student student5 = new Student("Denis", "PEGAS", 19);
-        create(student1);
-        create(student2);
-        create(student3);
-        create(student4);
-        create(student5);
-
-        read();
-        List<Student> students = read();
-        for (Student student: students) {
-            System.out.println(student);
-        }
-
-        deleteById(1);
-        dropStudentTable();
-   }
 
     public static int create(Student student){
         Session session = Util.getSessionFactory().openSession();

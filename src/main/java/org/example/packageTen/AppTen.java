@@ -9,30 +9,6 @@ import javax.persistence.Query;
 import java.util.List;
 
 public class AppTen {
-    public static void main(String[] args) {
-        Util.getSessionFactory();
-
-        Shop shop1 = new Shop("Milan", "Dior", "big",1967);
-        Shop shop2 = new Shop("London", "Burberry", "big",1955);
-        Shop shop3 = new Shop("Paris", "Nina Rici", "medium",1981);
-        Shop shop4 = new Shop("Rim", "Tom Ford", "big",1949);
-        Shop shop5 = new Shop("Madrid", "Carte", "big",1934);
-        create(shop1);
-        create(shop2);
-        create(shop3);
-        create(shop4);
-        create(shop5);
-
-        read();
-        List<Shop> shops = read();
-        for (Shop shop: shops) {
-            System.out.println(shop);
-        }
-
-        deleteById(1);
-        dropShopTable();
-
-    }
 
     public static long create(Shop shop){
         try{

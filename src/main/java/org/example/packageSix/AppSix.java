@@ -9,29 +9,6 @@ import javax.persistence.Query;
 import java.util.List;
 
 public class AppSix {
-    public static void main(String[] args) {
-        Util.getSessionFactory();
-
-        Fish fish1 = new Fish("Щука", "на речке", "50см", true);
-        Fish fish2 = new Fish("Минтай", "на речке", "60см", false);
-        Fish fish3 = new Fish("Акула", "море, океан", "5метров", true);
-        Fish fish4 = new Fish("Форель", "на речке", "70см", false);
-        Fish fish5 = new Fish("Кит", "море, океан", "33метра", false);
-        create(fish1);
-        create(fish2);
-        create(fish3);
-        create(fish4);
-        create(fish5);
-
-        read();
-        List<Fish> fish = read();
-        for (Fish f: fish) {
-            System.out.println(f);
-        }
-
-        deleteById(1);
-        dropFishTable();
-    }
 
     public static long create(Fish fish){
         try{

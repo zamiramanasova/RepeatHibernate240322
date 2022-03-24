@@ -9,30 +9,6 @@ import javax.persistence.Query;
 import java.util.List;
 
 public class AppFour {
-    public static void main(String[] args) {
-
-        Util.getSessionFactory();
-
-        Tree tree1 = new Tree("Дуб", "зеленый", 1500, "Буковые");
-        Tree tree2 = new Tree("Береза", "бело-зеленая", 120, "Березовые");
-        Tree tree3 = new Tree("Клен", "ярко-зеленый", 250, "Сапиндовые");
-        Tree tree4 = new Tree("Орех", "зеленый", 350, "Ореховые");
-        Tree tree5 = new Tree("Самшит", "ярко-зеленый", 500, "Самшитовые");
-        create(tree1);
-        create(tree2);
-        create(tree3);
-        create(tree4);
-        create(tree5);
-
-        read();
-        List<Tree> trees = read();
-        for (Tree tree: trees) {
-            System.out.println(tree);
-        }
-
-        deleteById(1);
-        dropTreeTable();
-    }
 
     public static long create(Tree tree) {
         try{

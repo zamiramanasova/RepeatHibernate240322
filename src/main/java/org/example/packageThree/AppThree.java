@@ -1,37 +1,12 @@
 package org.example.packageThree;
 
 import org.example.config.Util;
-import org.example.packageEight.Pupil;
-import org.example.packageTen.Shop;
 import org.hibernate.Session;
 
 import javax.persistence.Query;
 import java.util.List;
 
 public class AppThree {
-    public static void main(String[] args) {
-        Util.getSessionFactory();
-
-        Country country1 = new Country("Южная Америка", "Бразилия", 82000000, "Бразилиа" );
-        Country country2 = new Country("Северная Америка", "Канада", 90000000, "Оттава" );
-        Country country3 = new Country("Африка", "Марокко", 45000000, "Марокко" );
-        Country country4 = new Country("Евразия", "Россия", 140000000, "Ьосква" );
-        Country country5 = new Country("Австралия", "Австралия", 56000000, "Канберра" );
-        create(country1);
-        create(country2);
-        create(country3);
-        create(country4);
-        create(country5);
-
-        read();
-        List<Country> countryList = read();
-        for (Country country: countryList) {
-            System.out.println(country);
-        }
-
-        deleteById(1);
-        dropCountryTable();
-    }
 
     public static long create(Country country){
         try{

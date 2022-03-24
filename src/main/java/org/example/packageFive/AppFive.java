@@ -9,32 +9,6 @@ import javax.persistence.Query;
 import java.util.List;
 
 public class AppFive {
-    public static void main(String[] args) {
-        Util.getSessionFactory();
-
-        City city1 = new City("Paris","Evrazia", 21000000,486);
-        City city2 = new City("London","Evrazia", 13000000,41);
-        City city3 = new City("Moscow","Evrazia", 9000000,1141);
-        City city4 = new City("Bishkek","Evrazia", 2000000,1825);
-        City city5 = new City("Tashkent","Evrazia", 11000000,2400);
-        create(city1);
-        create(city2);
-        create(city3);
-        create(city4);
-        create(city5);
-
-
-        read();
-        List<City> cities = read();
-        for (City city: cities) {
-            System.out.println(city);
-        }
-
-        deleteById(1);
-        dropCitiesTable();
-
-    }
-
     public static long create(City city) {
         try{
             Session session = Util.getSessionFactory().openSession();
